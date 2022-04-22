@@ -1,0 +1,16 @@
+import Task from './Task'
+import { FaTimes} from 'react-icons/fa'
+
+
+const Tasks = ({ tasks, onDelete , onToggle}) => {
+
+  return (
+    <>
+      {tasks.map((task) => (
+        <Task key={task.id} task={task} onDelete = {onDelete} onToggle = {onToggle}/>
+      ))}
+    </>
+  )
+}
+
+export default Tasks
